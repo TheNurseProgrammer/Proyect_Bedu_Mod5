@@ -70,4 +70,13 @@ plot(predicciones, main = "Predicciones ARIMA", xlab = "Fecha", ylab = "Total Pr
 #!<-------Final de analisis con series de tiempo y visualizacion------->
 
 
+#!<-------Inicio de prueba de hipotesis y visualizacion------->
+contingency_table <- table(df$sub.category, df$market)
 
+# Realizar la prueba de chi cuadrado
+result_chi_square <- chisq.test(contingency_table)
+
+# Mostrar los resultados
+print(result_chi_square)
+
+#!<-------Fin de prueba de hipotesis y visualizacion------->
